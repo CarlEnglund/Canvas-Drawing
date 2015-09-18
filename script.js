@@ -1,7 +1,7 @@
 //Load Canvas
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
-
+var clear = document.getElementById('clear');
 //Set variables
 var radius = 10;
 var dragging = false;
@@ -37,7 +37,9 @@ var disEngage = function(){
 	context.beginPath();
 }
 
-
+function test() {
+	context.clearRect(0, 0, canvas.width, canvas.height);
+};
 
 canvas.addEventListener('mousedown', engage);
 canvas.addEventListener('mousemove', putPoint);
